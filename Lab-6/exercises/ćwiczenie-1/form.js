@@ -66,6 +66,15 @@ form.addEventListener("submit", (event) => {
     errorSpans[3].textContent = "";
   }
 
+  if (endDate.valueAsDate < startDate.valueAsDate) {
+    isValid = false;
+
+    errorSpans[3].textContent =
+      "Data zakończenia pobytu musi być późniejsza od daty rozpoczęcia pobytu";
+  } else {
+    errorSpans[2].textContent = "";
+    errorSpans[3].textContent = "";
+  }
   // check if end date is earlier than start date
   if (endDate.valueAsDate < startDate.valueAsDate) {
     isValid = false;

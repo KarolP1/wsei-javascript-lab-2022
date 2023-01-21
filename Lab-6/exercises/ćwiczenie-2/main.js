@@ -156,6 +156,8 @@ window.onload = function () {
   });
   displayClearBtn.addEventListener("click", displayClearBtnListener);
 
+  changeSignBtn.addEventListener("click", () => mainDisplay.changeSign());
+
   document.addEventListener("keydown", (e) => {
     if (e.key === "Backspace") {
       mainDisplay.removeDigit();
